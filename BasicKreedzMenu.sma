@@ -4,7 +4,7 @@
 #include <fun>
 #include <fakemeta>
 
-#define PLUGIN "Teleport"
+#define PLUGIN "Basic Kreedz Menu"
 #define VERSION "1.0"
 #define AUTHOR "big_biceps"
 
