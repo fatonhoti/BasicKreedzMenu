@@ -1,12 +1,22 @@
-# Useful resources related to AMX Mod X plugin creation for Counter-Strike 1.6.
+## What kind of plugin is 'Basic Kreedz Menu'?
+Basic Kreedz Menu (BKM) is a small and simple AMX Mod X plugin that allows the client to
 
-* **AMX Mod X API**: https://www.amxmodx.org/api/
+1) Place checkpoints which save current position and facing direction.
+2) Teleport to the previous, or previous-previous checkpoint.
 
-* **AMX Mod X Downloads**: [https://www.amxmodx.org/](https://www.amxmodx.org/downloads.php)
+It's main purpose is to be used as a handy tool for Kreedz players in Counter-Strike 1.6. Many climbers do not like to do pro runs (no checkpoints) as it can be very unforgiving due to lost progress when the player makes mistakes, as such this tool allows climbers to place checkpoints and teleport back to them in case they fail important jumps.
 
-* **Online .sma compiler:** https://www.amxmodx.org/webcompiler.cgi
+## Requirements
 
-* **AlliedModders forum:** https://forums.alliedmods.net/forumdisplay.php?f=3
+* **AMX Mod X 1.9** (not been tested on anything lower, e.g. 1.8.2)
+* `engine` module (comes with AMX Mod X)
+* `fun` module (comes with AMX Mod X)
+* `fakemeta` module (comes with AMX Mod X)
+
+## How do add the plugin to my server?
+Simply generate the `BasicKreedzMenu.amxx` file (see below instructions on how to compile `.sma` files), place it in `addons\amxmodx\plugins` and update `addons\amxmodx\configs\plugins.ini` by adding a new line that lists the plugin `BasicKreedzMenu.amxx`.
+
+Start the server and run `amx_plugins` in the server console. If you see `[...] Basic Kreedz Menu ... BasicKreedzMenu running` as an entry, the plugin should be successfully installed and ready to be used by clients on your server.
 
 ## How do I compile my `.sma` script to an `.amxx` file?
 
