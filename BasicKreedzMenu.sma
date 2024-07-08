@@ -22,7 +22,6 @@ public plugin_init() {
 	register_plugin(PLUGIN, VERSION, AUTHOR);
 	
 	create_tp_menu();
-	delete_buyzone();
 }
 
 public create_tp_menu() {
@@ -49,18 +48,6 @@ public create_tp_menu() {
 	// so we hook our own handler to it. As such, clients will
 	// be able to open the menu by pressing 'm'.
 	register_clcmd("chooseteam", "show_menuu");
-}
-
-public delete_buyzone() {
-	// TODO: Look into if there's a better way to disallow
-	// clients to open buy menu. This needs to be ran after
-	// each round end as well after change of maps.
-	// No bueno!
-	remove_entity_name("info_map_parameters");
-	remove_entity_name("func_buyzone");
-	new Entity = create_entity("info_map_parameters");
-	DispatchKeyValue(Entity, "buying", "3");
-	DispatchSpawn(Entity);
 }
 
 public show_menuu(id) {
@@ -184,3 +171,6 @@ public cmdStuck(id) {
 	revert_to(id, cpPrevPrevPos[id], cpPrevPrevVAngles[id], cpPrevPrevAngles[id]);
 	return PLUGIN_HANDLED;
 }
+/* AMXX-Studio Notes - DO NOT MODIFY BELOW HERE
+*{\\ rtf1\\ ansi\\ deff0{\\ fonttbl{\\ f0\\ fnil Tahoma;}}\n\\ viewkind4\\ uc1\\ pard\\ lang2057\\ f0\\ fs16 \n\\ par }
+*/
