@@ -12,7 +12,7 @@
 #define VISUAL_SHIFT_ONLY 0
 #define POSITION_OF_EYES 1
 
-new Float:cpPrevPos[32][3], cpPrevVAngles[32][3], Float:cpPrevAngles[32][3], bool:isCpPrevSet[32];
+new Float:cpPrevPos[32][3], Float:cpPrevVAngles[32][3], Float:cpPrevAngles[32][3], bool:isCpPrevSet[32];
 new Float:cpPrevPrevPos[32][3], Float:cpPrevPrevVAngles[32][3], Float:cpPrevPrevAngles[32][3], bool:isCpPrevPrevSet[32];
 
 new kz_menu;
